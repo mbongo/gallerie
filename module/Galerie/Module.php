@@ -3,8 +3,10 @@ namespace Galerie
 
 
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
+use Zend\ModuleManager\Feature\ConfigProviderInterface;
 
-class Module implements AutoloaderProviderInterface {
+
+class Module implements AutoloaderProviderInterface , ConfigProviderInterface {
 
    public function getAutoloaderConfig(){ 
   //chargement automatique des classes php
@@ -32,6 +34,11 @@ class Module implements AutoloaderProviderInterface {
 
 }
 
+public function getConfig()
+ { 
+   return include _DIR_.'/config/module.config.php'; 
+
+ }
 
 }
 
