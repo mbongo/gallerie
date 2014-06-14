@@ -18,5 +18,11 @@ return array(
         'galerie' => _DIR_.'/../view',
        ),
      ),
+'router'=> array(
+    'routes' => array(
+      'galerie' => array(
+       ),
+     ),
+  ),
 
 );
